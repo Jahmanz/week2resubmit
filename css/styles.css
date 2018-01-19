@@ -2,5 +2,22 @@
   display: block;
 }
 
-.languages {
+.answerCsharp {
   display: none;
+}
+
+.answerCSS {
+  display: none;
+}
+
+.answerRuby {
+  display: none;
+}
+
+.answerPhp {
+  display: none;
+}
+
+.answerJava {
+  display: none;
+}

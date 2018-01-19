@@ -1,37 +1,47 @@
 $(document).ready(function() {
-  $("#formOne").submit(function() {
-    var frontbackInput = $("inputfrontback").val();
-    var bigsmallInput = $("input#bigsmall").val();
-    var softwareInput = $("input#software").val();
-    var newoldInput= $("input#newold").val();
-    var broadInput = $("input#broad").val();
+  $("form#formOne").submit(function(event) {
+      event.preventDefault();
+    var frontbackInput = $("#frontback").val();
+    var bigsmallInput = $("#bigsmall").val();
+    var softwareInput = $("#software").val();
+    var newoldInput= $("#newold").val();
+    var broadInput = $("#broad").val();
 
-    if (frontbackInput === 'frontend' && bigsmallInput === "small" && softwareInput === "enduser" && newoldInput === "old" && broadInput === "yes")
+    if ((frontbackInput === 'frontend') && (bigsmallInput === "small") && (softwareInput === "enduser") && (newoldInput === "old") && (broadInput === "yes")) {
+      $("#clickable").click();
+      $(".answerCSS").show("#css");
+      $("#formOne").hide();
 
-    $("#csharp").text();
-    $("#languages").show()
+    //   } if ((frontbackInput === "backend") && (bigsmallInput === "big") && (softwareInput === "business") && (newoldInput === "old") && (broadInput === "yes")) {
+    //   $("#clickable").click();
+    //   $(".answerCsharp").show("#csharp");
+    //   $(".answerJava").show("#java");
+    //   $("#formOne").hide();
+    //
+    //   } if ((frontbackInput === "backend") && (bigsmallInput === "small") && (softwareInput === "enduser") && (newoldInput === "new") && (broadInput === "yes")) {
+    //   $("#clickable").click();
+    //   $(".answerRuby").show("#ruby");
+    //   $("#formOne").hide();
+    //
+    // } if ((frontbackInput === "frontend") && (bigsmallInput === "small") && (softwareInput === "enduser") && (newoldInput === "new") && (broadInput === "yes")) {
+    //   $("#clickable").click();
+    //   $(".answerRuby").show("#ruby");
+    //   $(".answerCSS").show("#css");
+    //   $("#formOne").hide();
+    //
+    // } if ((frontbackInput === "backend") && (bigsmallInput === "big") && (softwareInput === "business") && (newoldInput === "old") && (broadInput === "yes")) {
+    //   $("#clickable").click();
+    //   $(".answerCsharp").show("#csharp");
+    //   $(".answerPhp").show("#php");
+    //   $("#formOne").hide();
 
-    event.preventDefault();
+   // } else {
+   //  $("#clickable").click();
+   //  $(".answerJava").show("#java");
+   //  $(".answerPhp").show("#php");
+   //  $(".answerCsharp").show("#csharp");
+   //  $(".answerRuby").show("#ruby");
+   //  $("#formOne").hide();
+  }
   });
 });
-
-// $(document).ready(function() {
-//   $("form#insurance").submit(function(event) {
-//     var age = parseInt($("input#age").val());
-//     var gender = $("select#gender").val();
-//
-//     if (age) {
-//       var quote = (100 - age) * 3;
-//       if (gender === 'male' && age < 26) {
-//         quote += 50;
-//       }
-//
-//       $("#rate").empty().append(quote);
-//       $("#quote").show();
-//     } else {
-//       alert('Please enter your age.');
-//     }
-//
-//     event.preventDefault();
-//   });
-// });
